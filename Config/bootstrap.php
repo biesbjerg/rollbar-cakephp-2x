@@ -1,9 +1,9 @@
 <?php
 Configure::write('Rollbar', array(
-	'access_token' => 'YourAccessTokenHere',
-	'environment' => (env('ENVIRONMENT') === 'development') ? 'development' : 'production',
+	'access_token' => 'YourAccessTokenHere', // Copy/paste your Rollbar access token here
+	'environment' => 'production', // 'development' or 'production'
 	'root' => ROOT,
-	'handler' => 'agent', // Can be 'agent' or 'blocking'. 'agent' requires https://github.com/rollbar/rollbar-agent to be installed on server
+	'handler' => 'blocking', // Can be 'agent' or 'blocking'. 'agent' requires https://github.com/rollbar/rollbar-agent to be installed on server
 	'agent_log_location' => TMP . 'rollbar' . DS,
 	'max_errno' => -1
 ));
